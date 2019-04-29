@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Big shop</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="/media/logo.png" alt="BigShop" />
+      <nav>
+        <input
+          type="text"
+          placeholder="Search"
+          name="search"
+          class="search"
+        /><button tabindex="0">
+          <a href="#collection"
+            ><b>Collection <i class="fas fa-chevron-down"></i></b
+          ></a>
+          <ul class="sub-menu">
+            <li><a href="#arrivals">Arrivals</a></li>
+            <li><a href="#showcase">Showcase</a></li>
+          </ul>
+        </button>
+      </nav>
+      <div>
+        <h1>Summer</h1>
+        <h1>Collection</h1>
+        <h2><span>25%</span> OFF</h2>
+        <button>
+          <a href="#sales"
+            >Details<span> <i class="fas fa-long-arrow-alt-right"></i></span
+          ></a>
+        </button>
+      </div>
+      <svg
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polygon points="100,100 0,40 0,0 100,0" />
+      </svg>
+    </header>
+    <section id="arrivals">
+      <h1>Trendy Arrivals</h1>
+      <div id="arrivals-lots"></div>
+    </section>
+    <main>
+      <div>
+        <h1>Our Brands</h1>
+        <h3>Small Shoes 2017 new Arrivals mini</h3>
+        <h3>Messenger <span>Classic Shoes</span></h3>
+        <p>
+          In porttitor elit ac mi placerat hendrerit. Morbi accumsan, erat in
+          ullamcorper consectetur, nisi erat efficitur eros, sagittis tristique
+          odio turpis vitae dui. Vestibulum gravida est ut erat pretium, non
+          pretium diam feugiat. Integer egestas suscipit lorem ac fermentum.
+          Integer at mauris vitae justo sagittis dapibus. Pellentesque sit amet
+          nisl vitae orci vehicula faucibus. Fusce et lat, feugiat est.
+        </p>
+      </div>
+      <img src="/media/phone.png" alt="phone" />
+    </main>
+    <section id="showcase" class="showcase">
+      <h1>Our Showcase</h1>
+      <ul class="showcase-tabs">
+        <li class="tablinks" onclick="openTab(event, 'fashion-lots')">
+          Fashion
+        </li>
+        <li class="tablinks" onclick="openTab(event, 'fashion-lots')">
+          Furnitures
+        </li>
+        <li
+          class="tablinks"
+          onclick="openTab(event, 'watch-lots')"
+          id="defaultOpen"
+        >
+          Watches
+        </li>
+        <li class="tablinks" onclick="openTab(event, 'fashion-lots')">
+          Mobile
+        </li>
+        <li class="tablinks" onclick="openTab(event, 'fashion-lots')">
+          Cloth
+        </li>
+        <li class="tablinks" onclick="openTab(event, 'fashion-lots')">Toys</li>
+      </ul>
+      <div id="watch-lots" class="tabcontent"></div>
+      <div id="fashion-lots" class="tabcontent"></div>
+    </section>
+    <div class="news-letter">
+      <div class="news-back">
+        GET NOTIFIED
+        <h1 class="news-head">Newsletter</h1>
+      </div>
+      <form class="news-form">
+        <input
+          type="email"
+          placeholder="Enter your email address..."
+          name="email"
+          id="email"
+          title="Please enter an email address"
+        /><input type="submit" value="Submit" />
+      </form>
+    </div>
+    <footer>
+      <h1>Big Shop</h1>
+      <ul class="navigate" id="navigate">
+        <li><a href="#man">Man</a></li>
+        <li><a href="#woman">Woman</a></li>
+        <li><a href="#kids">Kids</a></li>
+        <li><a href="#bags">Bags</a></li>
+        <li><a href="#watches">Watches</a></li>
+        <li><a href="#toys">Toys</a></li>
+      </ul>
+      <ul class="social-media">
+        <li>
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fab fa-twitter"></i></a>
+        </li>
+      </ul>
+      <div class="copy-right">
+        © Copyright 2017. Big Shop by Victor Themes
+      </div>
+    </footer>
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="module" src="/ArrivalsLots.js"></script>
+    <script src="/scripts/main.js"></script>
+  </body>
+</html>
