@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  font-size: 2.5vmin;
 }
 body {
   font-family: "Open Sans", sans-serif;
@@ -103,6 +104,7 @@ nav button {
   border: none;
   box-sizing: content-box;
   z-index: inherit;
+  background: white;
 }
 input[type="text"] {
   width: 120px;
@@ -220,6 +222,9 @@ section h1 {
   grid-gap: 60px;
   text-align: center;
 }
+.lot-card {
+  cursor: pointer;
+}
 .lot-card:hover,
 .lot-card:focus {
   -webkit-box-shadow: 0px 0px 18px 1px rgba(222, 213, 222, 1);
@@ -292,7 +297,7 @@ main div p {
 }
 .showcase {
   margin: 40px auto 0 auto;
-  grid-template-rows: 180px 60px auto;
+  grid-template-rows: 180px auto auto;
 }
 .showcase h1 {
   grid-row: 1/2;
@@ -300,6 +305,7 @@ main div p {
 }
 .showcase-tabs {
   width: 90%;
+  height: auto;
   display: block;
   position: relative;
   grid-row: 2/3;
@@ -317,7 +323,7 @@ main div p {
   padding: 0;
   list-style: none;
   color: gray;
-  padding: 1.1em 2em;
+  padding: 1.1em 1.2em;
   cursor: pointer;
 }
 .showcase-tabs li:focus,
@@ -452,4 +458,59 @@ footer h1 {
 .showcase-tabs li.active {
   color: blueviolet;
   text-shadow: 1px 5px 5px rgba(141, 129, 249, 0.7);
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 14px;
+  }
+  header div h1 {
+    font-size: 3em;
+  }
+  section {
+    width: 100%;
+  }
+  section h1 {
+    font-size: 2em;
+  }
+  .lot-card .price {
+    font-size: 1em;
+  }
+  .array-lots {
+    grid-gap: 0;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
+    border: none;
+  }
+  .news-letter {
+    margin: 0 auto 0 auto;
+  }
+  .news-back {
+    font-size: 4em;
+  }
+  .news-head {
+    font-size: 2rem;
+    top: 34%;
+  }
+  .news-form input[type="email"] {
+    width: 60%;
+    min-width: 100px;
+  }
+  input[type="email"]::placeholder {
+    padding: 0 0.5em;
+    font-size: 0.9em;
+  }
+  .news-form [type="submit"] {
+    width: 100px;
+  }
+  .navigate li,
+  .social-media li {
+    margin: 1em 0.8em;
+  }
+  .showcase {
+    grid-template-rows: 90px auto auto;
+  }
+  .showcase-tabs li {
+    padding: 1.1em 1.2em;
+  }
 }
