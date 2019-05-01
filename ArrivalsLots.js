@@ -24,7 +24,7 @@ function Lot(props) {
   return React.createElement(
     "div",
     { className: "lot-card" },
-    React.createElement("img", { src: props.product.pic }),
+    React.createElement("img", { className: "lot-pic", src: props.product.pic }),
     React.createElement(
       "p",
       null,

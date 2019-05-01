@@ -15,7 +15,7 @@ function ShowcaseLots() {
 function Lot(props) {
   return (
     <div className="lot-card">
-      <img src={props.product.pic} />
+      <img className="lot-pic" src={props.product.pic} />
       <p>
         {props.product.description}
         <br />
