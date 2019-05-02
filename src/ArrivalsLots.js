@@ -26,9 +26,9 @@ function Lot(props) {
           })}
         </font>
       </p>
-      <button className="btn-arr">
+      <div className="btn-arr">
         <a href="#">Add to Cart</a>
-      </button>
+      </div>
     </div>
   );
 }

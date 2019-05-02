@@ -40,7 +40,7 @@ function Lot(props) {
       )
     ),
     React.createElement(
-      "button",
+      "div",
       { className: "btn-arr" },
       React.createElement(
         "a",

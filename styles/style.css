@@ -33,7 +33,7 @@ header div {
   float: right;
   grid-column: 2/3;
   grid-row: 2/3;
-  z-index: 100;
+  z-index: 99;
 }
 header div h1,
 header div h2 {
@@ -56,28 +56,32 @@ header div h2 span {
 header div h1:first-child {
   color: black;
 }
-header div button {
+.det-btn {
+  float: left;
   font-size: 0.8em;
-  font-weight: bold;
   margin: 4em 0;
+  padding: 0;
+  text-align: center;
   border: none;
   box-sizing: content-box;
   background-color: white;
-  width: 120px;
+  width: 140px;
   position: relative;
   border-radius: 20px;
   -webkit-box-shadow: 0px 0px 18px 1px rgba(222, 213, 222, 0.8);
   -moz-box-shadow: 0px 0px 18px 1px rgba(222, 213, 222, 0.8);
   box-shadow: 0px 0px 18px 1px rgba(222, 213, 222, 0.8);
-  z-index: 100;
+  text-shadow: none;
 }
-header div button a {
+.det-btn a {
+  font-family: "Open-sans", sans-serif;
   color: black;
   padding: 1em;
   display: block;
   text-decoration: none;
+  font-weight: bold;
 }
-header div button span {
+.det-btn span {
   color: blue;
 }
 nav {
@@ -125,27 +129,40 @@ input[type="text"]::placeholder {
   font-weight: bold;
   padding-left: 3em;
 }
-input[type="text"]::-moz-placeholder {
+.navigator input[type="text"]::-moz-placeholder {
   padding-left: 10px;
 }
-nav button {
+.navigator input[type="text"]:-moz-placeholder {
+  padding-left: 10px;
+}
+::-webkit-input-placeholder {
+  padding-left: 10px;
+}
+.main-menu {
   display: inline-block;
   width: 55%;
   border-left: 1px solid #ccc;
   box-sizing: border-box;
   position: relative;
-}
-nav button a {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  text-align: center;
+  text-shadow: none;
+  font-family: "Open-sans", sans-serif;
+}
+.main-menu a {
+  margin: 0;
+  padding: 0.5em 0;
+  width: 100%;
   text-decoration: none;
   color: black;
   width: 100%;
   display: block;
+  font-weight: bolder;
 }
-nav button ul {
+.main-menu ul {
   visibility: hidden;
-  padding: 0;
+  padding: 10px 0 0 0;
   margin: 0;
   position: absolute;
   background: white;
@@ -156,29 +173,29 @@ nav button ul {
   top: 100%;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 100;
   transform: translateY(-2em);
   transition: all 0.2s ease-in-out 0s, visibility 0s linear 0.3s,
     z-index 0s linear 0.01s;
 }
-nav button:focus .sub-menu,
-nav button:focus-within .sub-menu,
-nav button:hover .sub-menu {
+.main-menu:focus .sub-menu,
+.main-menu:focus-within .sub-menu,
+.main-menu:hover .sub-menu {
   visibility: visible;
   opacity: 1;
-  z-index: 1;
   transform: translateY(0%);
   transition-delay: 0s, 0s, 0.2s;
 }
-nav button ul li {
+.main-menu ul li {
   list-style: none;
-  padding: 1.2em 0;
+  padding: 0;
   margin: 0;
   font-weight: bold;
 }
-nav button ul li a {
+.main-menu ul li a {
   width: 100%;
   display: block;
+  padding: 1.2em 0;
 }
 nav a:hover {
   color: blue;
@@ -240,6 +257,8 @@ section h1 {
   font-size: 20px;
 }
 .btn-arr {
+  width: 60%;
+  height: auto;
   margin: 0 auto -25px auto;
   position: relative;
   visibility: hidden;
@@ -251,7 +270,7 @@ section h1 {
 }
 .btn-arr a {
   color: white;
-  padding: 1em 1.2em;
+  padding: 0.8em 0;
   text-decoration: none;
   display: block;
 }
@@ -520,8 +539,11 @@ footer h1 {
   .showcase {
     grid-template-rows: 90px auto auto;
   }
+  .showcase-tabs {
+    margin: 20px auto 40px auto;
+  }
   .showcase-tabs li {
-    padding: 1.1em 1.2em;
+    padding: 0.8em 1em;
   }
   .lot-pic {
     width: 50%;
