@@ -325,7 +325,7 @@ main div p {
   color: rgb(150, 150, 150);
 }
 .showcase {
-  margin: 40px auto 0 auto;
+  margin: 40px auto;
   grid-template-rows: 180px auto auto;
 }
 .showcase h1 {
