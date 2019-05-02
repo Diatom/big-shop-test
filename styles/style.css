@@ -101,6 +101,12 @@ nav {
   box-shadow: 0px 0px 18px 1px rgba(222, 213, 222, 0.3);
   z-index: 100;
 }
+#form-search {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: 45%;
+}
 input[type="text"],
 nav button {
   font-size: inherit;
@@ -111,7 +117,7 @@ nav button {
   background: white;
 }
 input[type="text"] {
-  width: 45%;
+  width: calc(100% - 30px);
   background-image: url("../media/search.png");
   background-position: 5px center;
   background-size: 20px 20px;
@@ -127,16 +133,12 @@ input[type="text"]::placeholder {
   color: black;
   opacity: 1;
   font-weight: bold;
-  padding-left: 3em;
+  position: relative;
+  display: block;
+  left: 10px;
 }
-.navigator input[type="text"]::-moz-placeholder {
-  padding-left: 10px;
-}
-.navigator input[type="text"]:-moz-placeholder {
-  padding-left: 10px;
-}
-::-webkit-input-placeholder {
-  padding-left: 10px;
+input[type="text"]:placeholder-shown {
+  padding-left: 30px;
 }
 .main-menu {
   display: inline-block;
@@ -487,7 +489,7 @@ footer h1 {
   text-shadow: 1px 5px 5px rgba(141, 129, 249, 0.7);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   html {
     font-size: 14px;
   }
