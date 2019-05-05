@@ -88,8 +88,18 @@ header div h1:first-child {
 .det-btn span {
   color: blue;
 }
+.det-btn:hover {
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(100, 100, 100, 0.5);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(100, 100, 100, 0.5);
+  box-shadow: 0px 0px 10px 1px rgba(100, 100, 100, 0.5);
+  background: rgb(139, 131, 249);
+}
+.det-btn a:hover,
+.det-btn a:hover span {
+  color: white;
+}
 nav {
-  padding: 0.6em;
+  padding: 0.4em 0.6em;
   margin: 40px 0 40px 40px;
   font-size: 0.8em;
   background-color: white;
@@ -105,30 +115,43 @@ nav {
   box-shadow: 0px 0px 18px 1px rgba(222, 213, 222, 0.3);
   z-index: 100;
 }
+.navigator:hover {
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(100, 100, 100, 0.5);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(100, 100, 100, 0.5);
+  box-shadow: 0px 0px 10px 1px rgba(100, 100, 100, 0.5);
+}
 #form-search {
   margin: 0;
   padding: 0;
   display: inline-block;
   width: 45%;
 }
-input[type="text"],
-nav button {
+input[type="text"] {
   font-size: inherit;
-  padding: 0.4em 0;
+  padding: 0.6em 0;
   border: none;
-  box-sizing: content-box;
+  box-sizing: border-box;
   z-index: inherit;
   background: white;
+  width: calc(100% - 35px);
+  position: relative;
+  display: inline-block;
 }
-input[type="text"] {
-  width: calc(100% - 30px);
-  background-image: url("../media/search.png");
-  background-position: 5px center;
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
+.search-label {
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  left: 5px;
+  margin-right: 10px;
+}
+.search-label img {
+  width: 18px;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 input[type="text"]:focus {
-  background-image: none;
+  outline: none;
 }
 input[type="text"]:focus::placeholder {
   color: transparent;
@@ -139,10 +162,7 @@ input[type="text"]::placeholder {
   font-weight: bold;
   position: relative;
   display: block;
-  left: 10px;
-}
-input[type="text"]:placeholder-shown {
-  padding-left: 30px;
+  text-align: center;
 }
 .main-menu {
   display: inline-block;
@@ -158,11 +178,10 @@ input[type="text"]:placeholder-shown {
 }
 .main-menu a {
   margin: 0;
-  padding: 0.5em 0;
+  padding: 0.6em 0;
   width: 100%;
   text-decoration: none;
   color: black;
-  width: 100%;
   display: block;
   font-weight: bolder;
 }
@@ -412,6 +431,9 @@ input[type="email"]::placeholder {
   color: black;
   opacity: 1;
   padding: 0 1em;
+}
+input[type="email"]:focus {
+  outline: none;
 }
 .news-form [type="submit"] {
   display: inline-block;
