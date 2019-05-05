@@ -20,11 +20,14 @@ header {
   background: url("../media/girl.png") no-repeat 0 100%;
   background-size: 50%;
 }
-header img {
+header a {
+  cursor: pointer;
+  z-index: 100;
+}
+header a img {
   margin: 40px 10vw;
   width: 160px;
   height: 40px;
-  z-index: 100;
   grid-column: 1/2;
   grid-row: 1/2;
 }
